@@ -91,7 +91,16 @@ t1 <- Wong %>%
             meddays = median(days, na.rm=TRUE),
             Q3days = quantile(days, 0.75, na.rm=TRUE))
 
-knitr::kable(t1)
+knitr::kable(t1, 
+             col.names = c("Sex",
+                          "Duration Q1",
+                           "Median Duration",
+                           "Duration Q3",
+                           "Days Q1",
+                           "Median Days",
+                           "Days Q3"),
+             caption = "Summary Statistics for Duration and Number of Days in Coma by Sex")
+
 
 ```
 
@@ -109,7 +118,14 @@ t2 <- Wong %>%
             meanviq = mean(piq, na.rm=TRUE),
             SDviq = sd(piq, na.rm=TRUE))
 
-knitr::kable(t2)
+knitr::kable(t2, 
+             digits = (2),
+             col.names = c("Sex",
+                          "Performance IQ Mean",
+                           "Performance IQ SD",
+                           "Verbal IQ Mean",
+                           "Verbal IQ SD"),
+             caption = "Statistics for Performance and Verbal IQ by Sex")
 ```
 
 
@@ -125,8 +141,12 @@ t3 <- Wong %>%
   summarise(freq = n(),
             pct = n()*100/ss)
 
-knitr::kable(t3)
-
+knitr::kable(t3, 
+             digits = (2),
+             col.names = c("Age Group",
+                          "Frequency",
+                           "Percent"),
+             caption = "Frequency and Percent by Age Group")
 ```
 
 
@@ -168,7 +188,7 @@ knitr::kable(m1m2,
 7. STUDENT CHOICE - pick either a `htmlwidget` from [http://gallery.htmlwidgets.org/](http://gallery.htmlwidgets.org/) or do a "flexdashboard" using the templates at [http://rmarkdown.rstudio.com/flexdashboard/](http://rmarkdown.rstudio.com/flexdashboard/) as a guide.
 
 ```{r}
-# Create dataframe by grabbing the data then filtering
+#make sure all library things installed 
 library(ggplot2)
 library(plotly)
 library(car)
