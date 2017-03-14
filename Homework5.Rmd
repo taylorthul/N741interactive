@@ -200,6 +200,9 @@ p1 <- plot_ly(data = Wong, x = ~piq, y = ~viq, color= ~duration,      type='scat
 ggplotly(p1)
 ```
 
+This can be found in my GitHub Respository at https://github.com/taylorthul/N741interactive.  The HTML link for interactive plot is at file:///Users/thultaylor123/Documents/N741/N741interactive/Homework5.html 
+
+
 ### References
 
 Wong, P. P., Monette, G., and Weiner, N. I. (2001) Mathematical models of cognitive recovery. Brain Injury, 15, 519–530.
